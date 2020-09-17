@@ -1,14 +1,16 @@
 <!-- Helt bare-bone, int nå fancy CSS eller naathing
     /Merkel -->
 <template>
+  <!-- Simpel div vilke centrerar allt på sidan innanför -->
   <div class="center">
     <h1>Explore All of Helsinki</h1>
     <form>
-      <input class="gibSpace" type="text" />
+      <input type="text" />
     </form>
     <button class="button" type="button">Search</button>
     <br />
 
+    <!-- Innehåller inline-block att få skite lodrätt -->
     <div class="navButtons">
       <button class="button" type="button">Find Routes</button>
       <button class="button" type="button">Tickets</button>
