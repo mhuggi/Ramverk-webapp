@@ -3,32 +3,66 @@
         <h1>Suggestions</h1>
 
     <div class="suggestions">
-        <div id="suggestion">
-            <h3>Helsinki senate square</h3>
+        <div class="suggestion">
+            <h3 class="title">Helsinki senate square</h3>
             <img class="pic" src="../assets/senate.jpg" alt="senatesquare" width="300">
+            <img class="stars" src="../assets/stars.png" alt="stars" width="200">
             <p class="info">The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland.</p>
-
-
+            <button class="button" type="button">Buy ticket</button>
         </div>
-
+        <div class="suggestion">
+            <h3 class="title">Helsinki senate square</h3>
+            <img class="pic" src="../assets/senate.jpg" alt="senatesquare" width="300">
+            <img class="stars" src="../assets/stars.png" alt="stars" width="200">
+            <p class="info">The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland.</p>
+            <button class="button" type="button">Buy ticket</button>
+        </div>
     </div>
 </div>
 </template>
 
 <style scoped>
+.suggestions {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    justify-items: start;
+    background-color: aqua;
+    grid-gap: 10px;
+    padding: 10px;
+}
 .suggestion {
     display: grid;
-    grid-template-columns: 350px 600px;
-    grid-template-rows: 350px 350px;
-    grid-auto-flow: column;
-    justify-items: start;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    padding: 50px 0;
+    background-color: aquamarine;
+    text-align: center;
 }
+
 .pic {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 .info {
-    grid-column: 2;
-    grid-row: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 50px;
+}
+.title {
+    grid-row: 1;
+}
+.button {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+}
+.stars {
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
