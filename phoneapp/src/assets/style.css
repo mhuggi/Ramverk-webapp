@@ -1,0 +1,67 @@
+html {
+    height: 100%;                    
+  }
+
+body {
+    background-color: #3899ec;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    text-align: center;
+}
+
+/* Används för <button></button>*/
+button {
+    background-color: #bd572d;
+    border: #bd572d solid 0px;
+    color: white;
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: hsla(18, 62%, 46%, 0.898);
+  }
+
+  /* Används för [type=submit] eller [type=button] - knappar*/
+  input[type=submit] {
+    background-color: #bd572d;
+    border: #bd572d solid 0px;
+    color: white;
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type=button] {
+    background-color: #bd572d;
+    border: #bd572d solid 0px;
+    color: white;
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type=button]:hover {
+    background-color: #bd582de5;
+  }
+
+  input[type=submit]:hover {
+    background-color: #bd582de5;
+  }
+
+
+/* Textbox (framsidans sökbox) */
+input[type=text], select {
+    width: auto;
+    padding: 12px;
+    /*margin: 5px 0 22px 0;*/
+    /*display: inline-block;*/
+    border: 1px solid rgb(3, 3, 3);
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
