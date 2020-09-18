@@ -1,27 +1,26 @@
 <template>
   <div id="app">
-    <Suggestions />
+    <Header />
+    <Explore />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Suggestions from './components/Suggestions'
+import Header from "./components/Header";
+import Explore from "./components/Explore";
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Suggestions
-  }
-}
+    Explore,
+    Header,
+    Footer,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/style.css";
 </style>
