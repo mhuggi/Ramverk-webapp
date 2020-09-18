@@ -1,12 +1,33 @@
 <template>
-  <!-- Endast tester här, inge aning hu man gör de påriktigt -->
-  <div class="bottomHeavy">
-    <h1>FOOTER</h1>
-  </div>
+  <footer>
+    <nav>
+      <ul>
+        <li>
+          <p>Powever by ASL</p>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </template>
 
 <style scoped>
-.bottomHeavy {
-  background-color: grey;
+/* Header */
+footer {
+  background-color: rgb(99, 99, 99);
+  color: white;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+nav {
+  margin-left: auto; /* Meny högra kanten */
+}
+nav ul {
+  margin: 0px 20px;
+}
+nav li {
+  list-style: none; /* Bort med bollar */
+  float: left; /* Horisontell meny */
 }
 </style>
