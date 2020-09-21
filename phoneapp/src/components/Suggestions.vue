@@ -9,6 +9,7 @@
             <img class="stars" src="../assets/stars.png" alt="stars" width="200">
             <p class="info">The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland.</p>
             <button class="button" type="button">Buy ticket</button>
+
         </div>
         <div class="suggestion">
             <h3 class="title">Helsinki senate square</h3>
@@ -23,22 +24,25 @@
 
 <style scoped>
 .suggestions {
+    margin: auto;
+    width: 60%;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-auto-flow: row;
     justify-items: start;
-    background-color: aqua;
-    grid-gap: 10px;
+    gap: 30px;
     padding: 10px;
 }
 .suggestion {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
-    padding: 50px 0;
-    background-color: aquamarine;
+    padding: 10px 0;
+    background-color: white;
     text-align: center;
+    color: #333333;
+    font-weight: 700;
 }
 
 .pic {
@@ -58,7 +62,6 @@
 }
 .button {
     margin-left: 50px;
-    margin-right: 50px;
     padding: 10px;
 }
 .stars {
@@ -66,3 +69,4 @@
     margin-right: auto;
 }
 </style>
+
