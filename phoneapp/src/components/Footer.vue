@@ -16,9 +16,10 @@ footer {
   background-color: rgb(99, 99, 99);
   color: white;
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
+  margin-top: 80px;
 }
 nav {
   margin-left: auto; /* Meny högra kanten */

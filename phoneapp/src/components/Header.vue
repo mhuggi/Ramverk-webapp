@@ -25,7 +25,7 @@ header {
   display: flex;
   align-items: center;
   padding: 6px 6px;
-  margin-bottom: 10%;
+  margin-bottom: 80px;
 }
 header a {
   text-decoration: none; /* Remove underline */
