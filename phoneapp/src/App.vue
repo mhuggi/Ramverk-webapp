@@ -34,10 +34,10 @@ export default {
           info: "The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland."
         },
         {
-          title: "Helsinki senate square 2",
-          pic: "senate.jpg",
+          title: "Helsinki Central Station",
+          pic: "train.jpg",
           stars: "stars.png",
-          info: "This is something completely else woo."
+          info: "Helsinki Central Station is the main station for commuter rail and long-distance trains departing from Helsinki, Finland. The station is used by approximately 400,000 people per day, of which about 200,000 are passengers."
         }
       ]
     }

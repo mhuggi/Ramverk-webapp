@@ -3,10 +3,6 @@
 <div>
         <h1>Suggestions</h1>
 
-        <p v-for="(s, i) in thisSugg" :key="i">
-            {{s.title}}
-        </p>
-
     <div class="suggestions">
         <div class="suggestion" v-for="(s, i) in thisSugg" :key="i">
             <h3 class="title">{{ s.title}}</h3>
@@ -63,8 +59,6 @@ export default {
 }
 </script>
 
-
-
 <style scoped>
 .suggestions {
     margin: auto;
@@ -82,10 +76,19 @@ export default {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     padding: 10px 0;
-    background-color: white;
     text-align: center;
     color: #333333;
+    margin: 0 auto;
+    max-width: 600px;
+    height: auto;
+    background-color: white;
+
     font-weight: 700;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    color: black;
+
 }
 
 .pic {
