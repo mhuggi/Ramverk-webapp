@@ -38,7 +38,14 @@ export default {
           pic: "train.jpg",
           stars: "stars.png",
           info: "Helsinki Central Station is the main station for commuter rail and long-distance trains departing from Helsinki, Finland. The station is used by approximately 400,000 people per day, of which about 200,000 are passengers."
+        },
+        {
+          title: "Kaivopuisto",
+          pic: "kaivo.jpg",
+          stars: "stars.png",
+          info: "Kaivopuisto (Swedish: Brunnsparken), or in spoken language,Brunsan, is one of the oldest and best known parks in central Helsinki, Finland, and also a neighbourhood of about 500 inhabitants where the park is located."
         }
+
       ]
     }
   }
