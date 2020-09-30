@@ -2,21 +2,27 @@
   <div id="app">
     <Header />
     <Explore />
+    <Suggestions />
+    <Routes />
     <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Explore from "./components/Explore";
 import Footer from "./components/Footer";
+import Suggestions from './components/Suggestions'
+import Explore from './components/Explore'
+import Routes from './components/Routes'
 
 export default {
   name: "App",
   components: {
-    Explore,
     Header,
     Footer,
+    Suggestions,
+    Explore,
+    Routes
   },
 };
 </script>

@@ -5,6 +5,8 @@ require('./assets/style.css');
 
 Vue.config.productionTip = false
 
-new Vue({
+var vm = new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+console.log(vm)

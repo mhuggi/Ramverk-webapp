@@ -16,11 +16,20 @@
             <img class="pic" src="../assets/senate.jpg" alt="senatesquare" width="300">
             <img class="stars" src="../assets/stars.png" alt="stars" width="200">
             <p class="info">The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland.</p>
+            
             <button class="button" type="button">Buy ticket</button>
         </div>
     </div>
 </div>
 </template>
+
+<script>
+export default {
+    name: "Suggestions",
+}
+</script>
+
+
 
 <style scoped>
 .suggestions {
