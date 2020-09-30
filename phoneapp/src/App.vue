@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Explore />
-    <Suggestions />
+    <Suggestions :thisSugg="suggestions"/>
     <Routes />
     <Footer />
   </div>
@@ -24,6 +24,24 @@ export default {
     Explore,
     Routes
   },
+  data: function() {
+    return {
+      suggestions: [
+        {
+          title: "Helsinki senate square",
+          pic: "senate.jpg",
+          stars: "stars.png",
+          info: "The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland."
+        },
+        {
+          title: "Helsinki senate square 2",
+          pic: "senate.jpg",
+          stars: "stars.png",
+          info: "This is something completely else woo."
+        }
+      ]
+    }
+  }
 };
 </script>
 

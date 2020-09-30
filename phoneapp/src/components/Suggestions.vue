@@ -1,23 +1,39 @@
 <template>
+
 <div>
         <h1>Suggestions</h1>
 
-    <div class="suggestions">
-        <div class="suggestion">
-            <h3 class="title">Helsinki senate square</h3>
-            <img class="pic" src="../assets/senate.jpg" alt="senatesquare" width="300">
-            <img class="stars" src="../assets/stars.png" alt="stars" width="200">
-            <p class="info">The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland.</p>
-            <button class="button" type="button">Buy ticket</button>
+        <p v-for="(s, i) in thisSugg" :key="i">
+            {{s.title}}
+        </p>
 
-        </div>
-        <div class="suggestion">
-            <h3 class="title">Helsinki senate square</h3>
-            <img class="pic" src="../assets/senate.jpg" alt="senatesquare" width="300">
-            <img class="stars" src="../assets/stars.png" alt="stars" width="200">
-            <p class="info">The Senate Square presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland.</p>
-            
-            <button class="button" type="button">Buy ticket</button>
+    <div class="suggestions">
+        <div class="suggestion" v-for="(s, i) in thisSugg" :key="i">
+            <h3 class="title">{{ s.title}}</h3>
+            <img class="pic" v-bind:src="require('../assets/' + s.pic + '')" alt="senatesquare" width="300">
+            <img class="stars" v-bind:src="require('../assets/' + s.stars + '')" alt="stars" width="200">
+            <p class="info">{{s.info}}</p>
+            <form v-if="visible">
+                <label for="adults">Adults:</label>
+                    <select id="adults" name="adults">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                <label for="children">Children:</label>
+                    <select id="children" name="children">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                <button @click.prevent="buyTickets()">Buy</button>
+            </form>
+            <button v-else @click="suggestButton()" class="button" type="button">Buy ticket</button>
+
         </div>
     </div>
 </div>
@@ -26,6 +42,24 @@
 <script>
 export default {
     name: "Suggestions",
+    data: function() {
+        return {
+            visible: false
+        }
+    },
+    props: {
+        thisSugg: Array
+    },
+    methods: {
+        suggestButton() {
+            console.log("Suggest buton")
+            this.visible = true
+        },
+        buyTickets() {
+            console.log("Bought tickets")
+        }
+    }
+
 }
 </script>
 
