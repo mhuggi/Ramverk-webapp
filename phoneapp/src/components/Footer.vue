@@ -17,9 +17,10 @@ footer {
   color: white;
   display: flex;
   /* position: absolute; */
-  bottom: 0;
-  width: 100%;
   margin-top: 80px;
+  bottom: 0;
+  min-width: 100%;
+  height: 70px;
 }
 nav {
   margin-left: auto; /* Meny högra kanten */

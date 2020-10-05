@@ -1,16 +1,18 @@
-html {
-    height: 100%;                    
+html, body {
+  min-height: 100%;                    
   }
 
 body {
     background-color: #3899ec;
     color: white;
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
+    font-family: sans-serif;
     text-align: center;
 }
 
 /* Används för <button></button>*/
+input:focus, textarea:focus, select:focus, button:focus{
+        outline: none;
+}
 button {
     background-color: #bd572d;
     border: #bd572d solid 0px;
@@ -23,7 +25,15 @@ button {
   }
   button:hover {
     background-color: hsla(18, 62%, 46%, 0.898);
+    transform:scale(0.99,0.99);
+    -webkit-transform:scale(0.99,0.99);
+    -moz-transform:scale(0.99,0.99);
   }
+
+  input[type=]:hover {
+    background-color: rgb(228, 228, 228);
+  }
+
 
   /* Används för [type=submit] eller [type=button] - knappar*/
   input[type=submit] {
@@ -47,11 +57,17 @@ button {
     cursor: pointer;
   }
   input[type=button]:hover {
-    background-color: #bd582de5;
+    background-color: hsla(18, 62%, 46%, 0.898);
+    transform:scale(0.99,0.99);
+    -webkit-transform:scale(0.99,0.99);
+    -moz-transform:scale(0.99,0.99);
   }
 
   input[type=submit]:hover {
-    background-color: #bd582de5;
+    background-color: hsla(18, 62%, 46%, 0.898);
+    transform:scale(0.99,0.99);
+    -webkit-transform:scale(0.99,0.99);
+    -moz-transform:scale(0.99,0.99);
   }
 
 
