@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-    <Header />
-    <Explore />
+    <Header @site="changeSite" :sites="headerSites" />
+    <div v-if="currSite === 'Explore'">    
+      <Explore />
+    </div>
+    <div v-else-if="currSite === 'Suggestions'">    
     <Suggestions :thisSugg="suggestions"/>
+    </div>
+    <div v-else-if="currSite === 'Routes'">    
     <Routes />
+    </div>
+    <div v-else-if="currSite === 'Navigation'">
+    <Navigation />
+    </div>    
+
     <Footer />
   </div>
 </template>
@@ -23,6 +33,13 @@ export default {
     Suggestions,
     Explore,
     Routes
+  },
+  methods: {
+    changeSite(s) {
+      this.currSite = s;
+      console.log(this.currSite)
+    },
+
   },
   data: function() {
     return {
@@ -46,7 +63,19 @@ export default {
           info: "Kaivopuisto (Swedish: Brunnsparken), or in spoken language,Brunsan, is one of the oldest and best known parks in central Helsinki, Finland, and also a neighbourhood of about 500 inhabitants where the park is located."
         }
 
-      ]
+      ],
+      headerSites: [
+        {
+          name: "Explore"
+        },
+        {
+          name: "Routes"
+        },
+        {
+          name: "Suggestions"
+        }
+      ],
+      currSite: "Explore"
     }
   }
 };

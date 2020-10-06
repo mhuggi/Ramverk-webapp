@@ -3,11 +3,8 @@
     <p>ASL</p>
     <nav>
       <ul>
-        <li>
-          <a href>Favourites</a>
-        </li>
-        <li>
-          <a href>More</a>
+        <li v-for="(s, i) in sites" :key="i">
+          <div @click="currSiteChange(s.name)">{{s.name}}</div>
         </li>
       </ul>
     </nav>
@@ -16,6 +13,22 @@
     </a>
   </header>
 </template>
+<script>
+export default {
+    name: "Header",
+    props: {
+        sites: Array
+    },
+    methods: {
+        currSiteChange(s) {
+            console.log("Change site to: " + s)
+            this.$emit('site', s)
+        }
+    }
+
+}
+</script>
+
 
 <style scoped>
 /* Header */
