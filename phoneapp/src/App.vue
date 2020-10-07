@@ -10,12 +10,13 @@
     <div v-else-if="currSite === 'Routes'">    
     <Routes />
     </div>
-    <div v-else-if="currSite === 'Navigation'">
+    <div v-else-if="currSite === 'Profile'">
     <Navigation />
     </div>    
     <div v-else-if="currSite === 'Pay'">
     <Pay :params="getParams()"/>
     </div>    
+
 
 
   </div>
@@ -27,6 +28,7 @@ import Suggestions from './components/Suggestions'
 import Explore from './components/Explore'
 import Routes from './components/Routes'
 import Pay from './components/Pay'
+import Navigation from './components/Navigation'
 
 export default {
   name: "App",
@@ -35,7 +37,8 @@ export default {
     Suggestions,
     Explore,
     Routes,
-    Pay
+    Pay,
+    Navigation
   },
   methods: {
     changeSite(s) {
@@ -121,7 +124,10 @@ export default {
         },
         {
           name: "Suggestions"
-        }
+        },
+        {
+          name: "Profile"
+        },
       ],
       currSite: "Explore"
     }

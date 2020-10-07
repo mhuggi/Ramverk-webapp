@@ -6,6 +6,7 @@
   </body>
 
   <button class="button" type="button">Claim Rewards</button>
+</div>
 </template>
 
 
