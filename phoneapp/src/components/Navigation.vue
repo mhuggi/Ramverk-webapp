@@ -1,5 +1,6 @@
 <template>
 <div>
+<div>
     <div class="upper">
     <h2> Your profile </h2>
     
@@ -20,6 +21,7 @@
 <div class="pbutton">
       <button class="button" type="button">Edit Profile</button>
 </div>
+
 
  
 
