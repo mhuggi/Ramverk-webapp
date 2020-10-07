@@ -13,35 +13,83 @@
     <div v-else-if="currSite === 'Navigation'">
     <Navigation />
     </div>    
+    <div v-else-if="currSite === 'Pay'">
+    <Pay :params="getParams()"/>
+    </div>    
 
-    <Footer />
+
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Suggestions from './components/Suggestions'
 import Explore from './components/Explore'
 import Routes from './components/Routes'
+import Pay from './components/Pay'
 
 export default {
   name: "App",
   components: {
     Header,
-    Footer,
     Suggestions,
     Explore,
-    Routes
+    Routes,
+    Pay
   },
   methods: {
     changeSite(s) {
       this.currSite = s;
-      console.log(this.currSite)
     },
+    getParams() {
+    let uri = window.location.href.split('?');
+    if (uri.length == 2)
+    {
+      let vars = uri[1].split('&');
+      let getVars = {};
+      let tmp = '';
+      vars.forEach(function(v){
+        tmp = v.split('=');
+        if(tmp.length == 2)
+        getVars[tmp[0]] = tmp[1];
+      });
+      if (getVars.start && getVars.dest) {
+        this.currSite = "Pay"
+      return ({
+        start: getVars.start,
+        dest: getVars.dest
+      })
+
+      }
+    }
+    }
 
   },
+  mounted: function() {
+  {
+    let uri = window.location.href.split('?');
+    if (uri.length == 2)
+    {
+      let vars = uri[1].split('&');
+      let getVars = {};
+      let tmp = '';
+      vars.forEach(function(v){
+        tmp = v.split('=');
+        if(tmp.length == 2)
+        getVars[tmp[0]] = tmp[1];
+      });
+        if (getVars.start && getVars.dest) {
+          this.currSite = "Pay"
+        }
+
+    }
+
+  }
+  },
+  
+
   data: function() {
+    
     return {
       suggestions: [
         {
