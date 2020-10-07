@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+     
+</head>
+<body>
+   
+    
+    <div id="app">
+      <div id="navbar">
+        <h1>ASL TOURISTMAP</h1>
+        <div id="alternatives">
+        <input type="text" placeholder="Search...">
+        <h3>NEAR BY</h3>
+      </div>
+      </div>
+        <div @click="trigger" id="trigger" ></div>
+      <!--------    HELSINKY CATHEDRAL POPUP       -->
+        <template v-if="show"> <!-- DESTINATIONS POP-UP-->
+          <div id="popup">
+          <div @click="shutter" id="shutter" ></div>
+          <h1>Helsinki Cathedral</h1>
+          <img src="domkyrka.jpg" alt="">
+          <div @click="buyticket" id="buyticket">Buy Ticket</div>
+          </div> <!--popup div-->
+          </template>
+          <!------------------------------------------>
+
+          
+          <!--------       BILJETT KÖP    ------------>
+        <template v-if="purchase">
+        
+          <div id="ticket">
+           <div id="ticket-top">
+            <div @click="abort" id="abort">Abort</div>
+            <div id="text">
+            <h2 id="direction">From: <br> <br> <br> To:</h2>
+            <h2 id="place">Kumpulan Campus <br><br> Helsinki Cathedral</h2>
+          </div></div>
+          <div id="ticket-bottom">
+          <img id="kyrka" src="domkyrka.jpg" alt="bild">
+          
+            <h2>Scan To Buy Ticket</h2>
+                       <img id="qr" src="qrqr.png" alt="qrcode">
+          </div>
+         </div> 
+         
+        </div>
+        
+        </template>
+        
+        
+    
+        
+ 
+    </div>
+
+    
+    
+    
+</body>
+<link rel="stylesheet" href="ASL.css">
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    show:false,
+    purchase:false
+    
+  },
+  methods: {
+  
+    trigger (){ //gul
+    this.show = true
+  
+    },
+    shutter () { //röd
+    this.show = false
+    
+   
+    },
+    buyticket () {
+      this.purchase = true
+      this.show = false
+  
+      
+
+    },
+    abort (){
+      this.purchase = false
+    }
+
+  }
+})
+</script>
+

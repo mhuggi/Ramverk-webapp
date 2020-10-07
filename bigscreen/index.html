@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <title>En Vue.js App</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+   
+
+    <div id="app">
+        <form>
+            <label for="email">Email:</label>
+        <!-- Vue.js använder v- som kallas Directive -->
+        <!-- v-bind är så vanligt att det finns shorthand : -->
+        <!-- problemet med v-bind är att det är one way data bound -->
+        <!-- För two way data binding finns v-model direktivet! -->
+        <!-- v-show är ett direktiv för display:none toggle -->
+        <!-- v-if är ett direktiv för att skapa eller förstöra -->
+        <!-- v-else är motsatsrirektivet till v-if -->
+        <input type="email" v-if="visible" v-model="email" >
+        <!-- Ett problem är att p syns en stund innan vue tar bort de -->
+        <!-- Lösningen är att använda v-cloak -->
+        <p v-else v-cloak>Tack för att du fyllde i formuläret</p>
+        <!-- <button @click.prevent="visaEmail">Submit</button> -->
+
+        <!-- <button @click.prevent="visaEmail">Submit</button>  -->
+        <!-- <email-component></email-component> -->
+       <email-component></email-component>
+    </form>
+    </div>
+</body>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('email-component' , {
+        template: '<input type="email" v-model="email">',
+        data: function(){
+            return{
+            email:"hahnssoj@arcada.fi"
+        }
+        }
+    })
+    // Smart att spara hela Vue instansen i en variabel!
+    var vm = new Vue({
+        el: '#app',
+        data: { 
+            email: "hahnssoj@arcada.fi", //two way bound formulär
+            visible: true ,
+            counter: 0  // Kolla vm.visible i konsolen
+        },
+        methods: {
+            visaEmail: function(){
+                alert("Din email är: " + this.email),
+                this.visible = false
+            }
+        } 
+    });
+    
+</script>
+
+</html>
